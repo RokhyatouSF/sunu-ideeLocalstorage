@@ -1,0 +1,294 @@
+:root {
+    --couleur-primaire: #0d6efd;
+    --couleur-secondaire: #6c757d;
+    --couleur-succes: #198754;
+    --couleur-danger: #dc3545;
+    --couleur-clair: #f8f9fa;
+    --couleur-sombre: #212529;
+
+    --ombre-legere: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --ombre-moyenne: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f4f7fb;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+/* HERO */
+
+.hero-section {
+    padding: 20px;
+}
+
+.hero-section h1 {
+    color: var(--couleur-sombre);
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1rem;
+}
+
+/* FORMULAIRE */
+
+.card {
+    border-radius: 18px;
+    box-shadow: var(--ombre-legere);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.form-control,
+.form-select {
+    border-radius: 12px;
+    padding: 12px;
+    transition: var(--transition);
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 10px rgba(13, 110, 253, 0.2);
+    border-color: var(--couleur-primaire);
+}
+
+/* BOUTONS */
+
+.btn {
+    border-radius: 12px;
+    padding: 10px 20px;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* CARTES IDEES */
+
+.carte-idee {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    background: white;
+    box-shadow: var(--ombre-legere);
+    transition: var(--transition);
+    height: 100%;
+}
+
+.carte-idee:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--ombre-moyenne);
+}
+
+.contenu-idee {
+    padding: 1.2rem;
+}
+
+.titre-idee {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--couleur-sombre);
+}
+
+.description-idee {
+    color: #555;
+    line-height: 1.6;
+    min-height: 80px;
+}
+
+.date-idee {
+    font-size: 0.85rem;
+    color: gray;
+}
+
+/* BADGES */
+
+.badge-categorie {
+    padding: 8px 12px;
+    border-radius: 30px;
+    color: white;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* PEDAGOGIE */
+
+.pedagogie {
+    border-left: 8px solid #0d6efd;
+}
+
+.badge-pedagogie {
+    background: #0d6efd;
+}
+
+/* EVENEMENT */
+
+.evenement {
+    border-left: 8px solid #fd7e14;
+}
+
+.badge-evenement {
+    background: #fd7e14;
+}
+
+/* CAMPUS */
+
+.campus {
+    border-left: 8px solid #20c997;
+}
+
+.badge-campus {
+    background: #20c997;
+}
+
+/* TECHNIQUE */
+
+.technique {
+    border-left: 8px solid #6f42c1;
+}
+
+.badge-technique {
+    background: #6f42c1;
+}
+
+/* ACTIONS */
+
+.actions-idee {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.actions-idee button {
+    flex: 1;
+}
+
+/* ETAT VIDE */
+
+.vide {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.vide i {
+    font-size: 4rem;
+    color: #c0c0c0;
+}
+
+.vide h3 {
+    margin-top: 20px;
+}
+
+.vide p {
+    color: gray;
+}
+
+/* RECHERCHE */
+
+#champ-recherche {
+    border-radius: 12px;
+}
+
+/* NAVBAR */
+
+.navbar {
+    box-shadow: var(--ombre-legere);
+}
+
+/* ANIMATION */
+
+.animation-apparition {
+    animation: apparition 0.4s ease;
+}
+
+.statistique-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.statistique-card:hover {
+    transform: translateY(-5px);
+}
+
+.statistique-card h5 {
+    color: #6c757d;
+    font-size: .9rem;
+}
+
+.statistique-card h2 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.col-lg-4 .card {
+    position: sticky;
+    top: 20px;
+}
+
+@keyframes apparition {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* TOAST */
+
+.toast {
+    border-radius: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .card-body {
+        padding: 1.2rem;
+    }
+
+    .titre-idee {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .actions-idee {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+}
